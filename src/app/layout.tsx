@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -25,7 +26,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <div className="site-shell">
+          <header className="site-header">
+            <div className="site-header__inner">
+              <Link href="/posts" className="site-brand">
+                A2 Synth
+              </Link>
+              <nav aria-label="Primary">
+                <ul className="site-nav">
+                  <li>
+                    <Link href="/posts" className="site-nav__link">
+                      Posts
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/links" className="site-nav__link">
+                      Links
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+          <main className="site-main">{children}</main>
+        </div>
       </body>
     </html>
   );
