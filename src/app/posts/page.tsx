@@ -26,8 +26,8 @@ const postsQuery = groq`
 `;
 
 export const metadata: Metadata = {
-  title: "Sanity Blog",
-  description: "Latest posts from the Sanity-powered blog.",
+  title: "A2 SYNTH",
+  description: "Communication",
 };
 
 export const revalidate = 120;
