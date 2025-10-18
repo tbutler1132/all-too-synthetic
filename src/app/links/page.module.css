@@ -1,0 +1,96 @@
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 24px 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  display: grid;
+  gap: 16px;
+}
+
+.kicker {
+  font-family: var(--font-geist-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  opacity: 0.65;
+}
+
+.heading {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.subheading {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.linksList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+}
+
+.linkCard {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.linkCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.linkAnchor {
+  display: grid;
+  gap: 8px;
+  padding: 20px 24px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.linkLabel {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.linkDescription {
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+@media (prefers-color-scheme: dark) {
+  .linkCard {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .linkCard:hover {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 72px 16px 96px;
+    gap: 40px;
+  }
+
+  .linkAnchor {
+    padding: 18px 20px;
+  }
+}
