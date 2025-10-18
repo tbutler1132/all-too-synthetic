@@ -32,7 +32,9 @@ export const metadata: Metadata = {
 
 export const revalidate = 120;
 
-function isPortableTextSpan(value: unknown): value is PortableTextSpan & { text: string } {
+function isPortableTextSpan(
+  value: unknown
+): value is PortableTextSpan & { text: string } {
   return (
     typeof value === "object" &&
     value !== null &&
@@ -90,11 +92,9 @@ export default async function PostsPage() {
   return (
     <div className={styles.page}>
       <header className={styles.hero}>
-        <p className={styles.kicker}>A2 Synth</p>
-        <h1 className={styles.heading}>Sanity Notes &amp; Musings</h1>
-        <p className={styles.subheading}>
-          Thoughts on synths, sound design, and the creative process. Fresh from the studio.
-        </p>
+        <p className={styles.kicker}>ALL TOO SYNTHETIC</p>
+        <h1 className={styles.heading}>Communication</h1>
+        <p className={styles.subheading}>Published communication</p>
       </header>
 
       <main className={styles.main}>
@@ -114,12 +114,18 @@ export default async function PostsPage() {
                 <li key={post._id} className={styles.postCard}>
                   <article>
                     <p className={styles.postMeta}>
-                      {publishedAt ? <span>{publishedAt}</span> : <span>Draft</span>}
+                      {publishedAt ? (
+                        <span>{publishedAt}</span>
+                      ) : (
+                        <span>Draft</span>
+                      )}
                     </p>
                     <h2 className={styles.postTitle}>
                       <Link href={href}>{post.title}</Link>
                     </h2>
-                    {excerpt ? <p className={styles.postExcerpt}>{excerpt}</p> : null}
+                    {excerpt ? (
+                      <p className={styles.postExcerpt}>{excerpt}</p>
+                    ) : null}
                     <div className={styles.postAction}>
                       <Link href={href} className={styles.readMore}>
                         Read post →
