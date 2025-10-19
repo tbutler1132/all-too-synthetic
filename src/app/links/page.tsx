@@ -15,6 +15,10 @@ const socialLinks: SocialLink[] = [
     href: "https://www.instagram.com/alltoosynthetic",
   },
   {
+    label: "X",
+    href: "https://x.com/alltoosynthetic",
+  },
+  {
     label: "YouTube",
     href: "https://www.youtube.com/@alltoosynthetic",
   },
