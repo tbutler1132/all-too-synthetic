@@ -11,6 +11,10 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   {
+    label: "Email",
+    href: "mailto:tbutler1132@gmail.com",
+  },
+  {
     label: "Instagram",
     href: "https://www.instagram.com/alltoosynthetic",
   },
@@ -29,10 +33,6 @@ const socialLinks: SocialLink[] = [
   {
     label: "GitHub",
     href: "https://github.com/tbutler1132",
-  },
-  {
-    label: "Email",
-    href: "mailto:tbutler1132@gmail.com",
   },
 ];
 
