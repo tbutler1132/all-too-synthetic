@@ -93,7 +93,7 @@ export default async function PostsPage() {
     <div className={styles.page}>
       <header className={styles.hero}>
         <p className={styles.kicker}>ALL TOO SYNTHETIC</p>
-        <h1 className={styles.heading}>Communication</h1>
+        <h1 className={styles.heading}>Posts</h1>
         <p className={styles.subheading}>Published communications</p>
       </header>
 
