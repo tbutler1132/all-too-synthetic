@@ -1,0 +1,274 @@
+.editor-page {
+  display: grid;
+  gap: 32px;
+  padding: 48px 16px 64px;
+}
+
+.editor-page__header {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  gap: 12px;
+}
+
+.editor-page__title {
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+.editor-page__lead {
+  font-size: 1rem;
+  opacity: 0.72;
+}
+
+.tiptap-shell {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.tiptap-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.05);
+}
+
+.tiptap-toolbar__group {
+  display: flex;
+  gap: 6px;
+}
+
+.tiptap-toolbar__group + .tiptap-toolbar__group {
+  padding-left: 12px;
+  border-left: 1px solid rgba(10, 10, 10, 0.08);
+  margin-left: 6px;
+}
+
+.tiptap-button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  line-height: 1;
+  font-weight: 600;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease,
+    box-shadow 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+}
+
+.tiptap-button:hover:not(:disabled),
+.tiptap-button:focus-visible:not(:disabled) {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: rgba(17, 24, 39, 0.95);
+  outline: none;
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.12);
+}
+
+.tiptap-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.tiptap-button.is-active {
+  background: rgba(59, 130, 246, 0.18);
+  border-color: rgba(59, 130, 246, 0.58);
+  color: rgba(17, 24, 39, 0.98);
+}
+
+.tiptap-button__icon {
+  font-weight: 600;
+}
+
+.tiptap-button__icon--italic {
+  font-style: italic;
+}
+
+.tiptap-button__icon--strike {
+  text-decoration: line-through;
+}
+
+.tiptap-editor__surface {
+  position: relative;
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(10, 10, 10, 0.12);
+  background: rgba(255, 255, 255, 0.72);
+  min-height: 320px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tiptap-editor__surface.is-focused {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+.tiptap-editor__placeholder {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 0.95rem;
+  color: rgba(15, 23, 42, 0.42);
+  pointer-events: none;
+}
+
+.tiptap-editor__content {
+  outline: none;
+  min-height: 280px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: inherit;
+}
+
+.tiptap-editor__content p {
+  margin: 0 0 0.9rem;
+}
+
+.tiptap-editor__content ul,
+.tiptap-editor__content ol {
+  padding-left: 1.5rem;
+  margin: 0 0 0.9rem;
+}
+
+.tiptap-editor__content ul {
+  list-style: disc;
+}
+
+.tiptap-editor__content ol {
+  list-style: decimal;
+}
+
+.tiptap-editor__content blockquote {
+  margin: 0 0 0.9rem;
+  padding-left: 1rem;
+  border-left: 3px solid rgba(59, 130, 246, 0.35);
+  color: rgba(15, 23, 42, 0.7);
+  font-style: italic;
+}
+
+.tiptap-editor__content code {
+  font-family: var(--font-geist-mono, ui-monospace), SFMono-Regular, Menlo,
+    Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  background: rgba(15, 23, 42, 0.08);
+  border-radius: 6px;
+  padding: 0.15em 0.4em;
+  font-size: 0.95em;
+}
+
+.tiptap-editor__content pre {
+  background: rgba(15, 23, 42, 0.9);
+  color: #f3f4f6;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 0 0 1rem;
+}
+
+.tiptap-editor__content pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.tiptap-editor__content hr {
+  border: none;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.2);
+  margin: 1.5rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tiptap-toolbar {
+    border-color: rgba(255, 255, 255, 0.08);
+    background: rgba(13, 19, 33, 0.6);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  .tiptap-toolbar__group + .tiptap-toolbar__group {
+    border-left-color: rgba(255, 255, 255, 0.08);
+  }
+
+  .tiptap-button:hover:not(:disabled),
+  .tiptap-button:focus-visible:not(:disabled) {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.6);
+    color: #e8f1ff;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+  }
+
+  .tiptap-button.is-active {
+    background: rgba(59, 130, 246, 0.32);
+    color: #e8f1ff;
+  }
+
+  .tiptap-editor__surface {
+    border-color: rgba(255, 255, 255, 0.1);
+    background: rgba(18, 24, 38, 0.85);
+  }
+
+  .tiptap-editor__surface.is-focused {
+    border-color: rgba(147, 197, 253, 0.6);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.25);
+  }
+
+  .tiptap-editor__placeholder {
+    color: rgba(226, 232, 240, 0.4);
+  }
+
+  .tiptap-editor__content code {
+    background: rgba(226, 232, 240, 0.1);
+  }
+
+  .tiptap-editor__content pre {
+    background: rgba(9, 12, 20, 0.95);
+  }
+
+  .tiptap-editor__content hr {
+    background: rgba(226, 232, 240, 0.2);
+  }
+
+  .editor-page__lead {
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 640px) {
+  .editor-page {
+    padding-top: 32px;
+  }
+
+  .editor-page__title {
+    font-size: 1.9rem;
+  }
+
+  .tiptap-toolbar {
+    gap: 6px;
+  }
+
+  .tiptap-toolbar__group + .tiptap-toolbar__group {
+    padding-left: 8px;
+    margin-left: 2px;
+  }
+
+  .tiptap-button {
+    padding: 6px 8px;
+    min-height: 30px;
+  }
+
+  .tiptap-editor__surface {
+    padding: 16px;
+  }
+}
